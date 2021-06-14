@@ -1,0 +1,41 @@
+---
+title: "corepacks: bioc-maintained packages and their dependencies"
+shorttitle: "outlier dytection methods"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{corepacks: bioc-maintained packages and their dependencies}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+BiocQE includes a simple data frame with the "Bioconductor Maintainer"-owned
+packages.
+
+```{r getinfo}
+suppressPackageStartupMessages({
+library(BiocQE)
+library(BiocPkgTools)
+library(dplyr)
+library(DT)
+library(tibble)
+})
+data(bioc_maint_packs)
+datatable(bioc_maint_packs)
+```
+
+# Dependencies
+
+```{r lkmore}
+if (!exists("li")) li = biocPkgList()
+lj = left_join(bioc_maint_packs, li, by="Package")
+as_tibble(lj)
+```

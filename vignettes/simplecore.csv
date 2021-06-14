@@ -1,0 +1,143 @@
+"","Package","Maintainer","Depends","LinkingTo","Version","SystemRequirements"
+"1","annotate","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); AnnotationDbi (>= 1.27.5); XML","NA","1.70.0",NA
+"2","AnnotationDbi","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.7.0); methods; utils; stats4; BiocGenerics (>=
+0.29.2); Biobase (>= 1.17.0); IRanges","NA","1.54.1",NA
+"3","AnnotationFilter","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.4.0)","NA","1.16.0",NA
+"4","AnnotationForge","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.5.0); methods; utils; BiocGenerics (>= 0.15.10); Biobase (>= 1.17.0); AnnotationDbi (>= 1.33.14)","NA","1.34.0",NA
+"5","AnnotationHub","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","BiocGenerics (>= 0.15.10); BiocFileCache (>= 1.5.1)","NA","3.0.0",NA
+"6","AnnotationHubData","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.2.2); methods; utils; S4Vectors (>= 0.7.21); IRanges
+(>= 2.3.23); GenomicRanges; AnnotationHub (>= 2.15.15)","NA","1.22.0",NA
+"7","AnVIL","Martin Morgan <mtmorgan.bioc@gmail.com>","R (>= 3.6); dplyr","NA","1.4.0",NA
+"8","Biobase","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); BiocGenerics (>= 0.27.1); utils","NA","2.52.0",NA
+"9","BiocCheck","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.5.0)","NA","1.28.0",NA
+"10","BiocDockerManager","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.1)","NA","1.4.0","docker"
+"11","BiocGenerics","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; utils; graphics; stats; parallel","NA","0.38.0",NA
+"12","BiocIO","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0)","NA","1.2.0",NA
+"13","BiocParallel","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods","BH","1.26.0","C++11"
+"14","BiocStyle","Bioconductor Package <maintainer@bioconductor.org>","NA","NA","2.20.0",NA
+"15","BiocVersion","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.1.0)","NA","3.13.1",NA
+"16","biocViews","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.6.0)","NA","1.60.0",NA
+"17","bioDist","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.0); methods; Biobase; KernSmooth","NA","1.64.0",NA
+"18","biomaRt","Mike Smith <grimbough@gmail.com>","methods","NA","2.48.0",NA
+"19","Category","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; stats4; BiocGenerics; AnnotationDbi; Biobase; Matrix","NA","2.58.0",NA
+"20","chipseq","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); methods; BiocGenerics (>= 0.1.0); S4Vectors (>=
+0.17.25); IRanges (>= 2.13.12); GenomicRanges (>= 1.31.8); ShortRead","NA","1.42.0",NA
+"21","CoCiteStats","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.0); org.Hs.eg.db","NA","1.64.0",NA
+"22","DelayedArray","Hervé Pagès <hpages.on.github@gmail.com>","R (>= 4.0.0); methods; stats4; Matrix; BiocGenerics (>=
+0.37.0); MatrixGenerics (>= 1.1.3); S4Vectors (>= 0.27.2); IRanges (>= 2.17.3)","S4Vectors","0.18.0",NA
+"23","DynDoc","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; utils","NA","1.70.0",NA
+"24","ensemblVEP","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; BiocGenerics; GenomicRanges; VariantAnnotation","NA","1.34.0","Ensembl VEP (API version 104) and the Perl modules
+DBI and DBD::mysql must be installed. See the package README
+and Ensembl installation instructions:
+http://www.ensembl.org/info/docs/tools/vep/script/vep_download.html#installer"
+"25","ExperimentHub","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; BiocGenerics (>= 0.15.10); AnnotationHub (>= 2.19.3); BiocFileCache (>= 1.5.1)","NA","2.0.0",NA
+"26","ExperimentHubData","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","utils; BiocGenerics (>= 0.15.10); S4Vectors; AnnotationHubData
+(>= 1.21.3)","NA","1.18.0",NA
+"27","genefilter","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","NA","NA","1.74.0",NA
+"28","GeneMeta","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); methods; Biobase (>= 2.5.5); genefilter","NA","1.64.0",NA
+"29","geneplotter","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); methods; Biobase; BiocGenerics; lattice; annotate","NA","1.70.0",NA
+"30","GenomeInfoDb","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; BiocGenerics (>= 0.37.0); S4Vectors (>=
+0.25.12); IRanges (>= 2.13.12)","NA","1.28.0",NA
+"31","GenomicAlignments","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; BiocGenerics (>= 0.37.0); S4Vectors (>=
+0.27.12); IRanges (>= 2.23.9); GenomeInfoDb (>= 1.13.1); GenomicRanges (>= 1.41.5); SummarizedExperiment (>= 1.9.13); Biostrings (>= 2.55.7); Rsamtools (>= 1.31.2)","S4Vectors; IRanges","1.28.0",NA
+"32","GenomicFeatures","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","BiocGenerics (>= 0.1.0); S4Vectors (>= 0.17.29); IRanges (>=
+2.13.23); GenomeInfoDb (>= 1.25.7); GenomicRanges (>= 1.31.17); AnnotationDbi (>= 1.41.4)","NA","1.44.0",NA
+"33","GenomicFiles","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.1.0); methods; BiocGenerics (>= 0.11.2); MatrixGenerics; GenomicRanges (>= 1.31.16); SummarizedExperiment; BiocParallel (>= 1.1.0); Rsamtools (>=
+1.17.29); rtracklayer (>= 1.25.3)","NA","1.28.0",NA
+"34","GenomicRanges","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; stats4; BiocGenerics (>= 0.37.0); S4Vectors (>= 0.27.12); IRanges (>= 2.23.9); GenomeInfoDb (>=
+1.15.2)","S4Vectors; IRanges","1.44.0",NA
+"35","GOstats","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); Biobase (>= 1.15.29); Category (>= 2.43.2); graph","NA","2.58.0",NA
+"36","gpls","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","NA","NA","1.64.0",NA
+"37","graph","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.10); methods; BiocGenerics (>= 0.13.11)","NA","1.70.0",NA
+"38","GSEABase","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.6.0); BiocGenerics (>= 0.13.8); Biobase (>= 2.17.8); annotate (>= 1.45.3); methods; graph (>= 1.37.2)","NA","1.54.0",NA
+"39","HDF5Array","Hervé Pagès <hpages.on.github@gmail.com>","R (>= 3.4); methods; DelayedArray (>= 0.15.16); rhdf5 (>=
+2.31.6)","S4Vectors (>= 0.27.13); Rhdf5lib","1.20.0","GNU make"
+"40","hypergraph","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.1.0); methods; utils; graph","NA","1.64.0",NA
+"41","Icens","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","survival","NA","1.64.0",NA
+"42","IRanges","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; utils; stats; BiocGenerics (>= 0.37.0); S4Vectors (>= 0.29.19)","S4Vectors","2.26.0",NA
+"43","KEGGREST","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.5.0)","NA","1.32.0",NA
+"44","LoomExperiment","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.5.0); S4Vectors; SingleCellExperiment; SummarizedExperiment; methods; rhdf5; BiocIO","NA","1.10.1",NA
+"45","MultiAssayExperiment","Marcel Ramos <marcel.ramos@roswellpark.org>","R (>= 4.0.0); SummarizedExperiment (>= 1.3.81)","NA","1.18.0",NA
+"46","Organism.dplyr","Martin Morgan <martin.morgan@roswellpark.org>","R (>= 3.4); dplyr (>= 0.7.0); AnnotationFilter (>= 1.1.3)","NA","1.20.0",NA
+"47","OrganismDbi","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 2.14.0); methods; BiocGenerics (>= 0.15.10); AnnotationDbi (>= 1.33.15); GenomicFeatures (>= 1.39.4)","NA","1.34.0",NA
+"48","pkgDepTools","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; graph; RBGL","NA","1.58.0",NA
+"49","ppiStats","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","ScISI (>= 1.13.2); lattice; ppiData (>= 0.1.19)","NA","1.58.0",NA
+"50","RaggedExperiment","Martin Morgan <martin.morgan@roswellpark.org>","R (>= 3.6.0); GenomicRanges (>= 1.37.17)","NA","1.16.0",NA
+"51","RBGL","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","graph; methods","BH","1.68.0",NA
+"52","RGalaxy","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","XML; methods; tools; optparse","NA","1.36.0",NA
+"53","rhdf5","Mike Smith <mike.smith@embl.de>","R (>= 4.0.0); methods","Rhdf5lib","2.36.0","GNU make"
+"54","rhdf5filters","Mike Smith <grimbough@gmail.com>","NA","Rhdf5lib","1.4.0","GNU make"
+"55","Rhdf5lib","Mike Smith <grimbough@gmail.com>","R (>= 4.0.0)","NA","1.14.1","GNU make"
+"56","Rhtslib","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","NA","zlibbioc","1.24.0","libbz2 & liblzma & libcurl (with header files), GNU
+make"
+"57","Rsamtools","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; GenomeInfoDb (>= 1.1.3); GenomicRanges (>= 1.31.8); Biostrings (>= 2.47.6); R (>= 3.5.0)","Rhtslib (>= 1.17.7); S4Vectors; IRanges; XVector; Biostrings","2.8.0","GNU make"
+"58","S4Vectors","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; utils; stats; stats4; BiocGenerics (>=
+0.37.0)","NA","0.30.0",NA
+"59","ShortRead","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","BiocGenerics (>= 0.23.3); BiocParallel; Biostrings (>=
+2.47.6); Rsamtools (>= 1.31.2); GenomicAlignments (>= 1.15.6)","S4Vectors; IRanges; XVector; Biostrings; Rhtslib; zlibbioc","1.50.0",NA
+"60","SummarizedExperiment","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; MatrixGenerics (>= 1.1.3); GenomicRanges (>= 1.41.5); Biobase","NA","1.22.0",NA
+"61","UniProt.ws","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","methods; utils; RSQLite; RCurl; BiocGenerics (>= 0.13.8)","NA","2.32.0",NA
+"62","VariantAnnotation","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 4.0.0); methods; BiocGenerics (>= 0.37.0); MatrixGenerics; GenomeInfoDb (>= 1.15.2); GenomicRanges (>=
+1.41.5); SummarizedExperiment (>= 1.19.5); Rsamtools (>=
+1.99.0)","S4Vectors; IRanges; XVector; Biostrings; Rhtslib","1.38.0","GNU make"
+"63","XVector","Hervé Pagès <hpages.on.github@gmail.com>","R (>= 4.0.0); methods; BiocGenerics (>= 0.37.0); S4Vectors (>=
+0.27.12); IRanges (>= 2.23.9)","S4Vectors; IRanges","0.32.0",NA
+"64","zlibbioc","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","NA","NA","1.38.0",NA
+"65","BiocCaseStudies","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","tools; methods; utils; Biobase","NA","1.54.0",NA
+"66","HCABrowser","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.6.0); dplyr; AnVIL","NA","1.8.0",NA
+"67","HCAExplorer","Bioconductor Package Maintainer
+<maintainer@bioconductor.org>","R (>= 3.6.0); dplyr","NA","1.6.0",NA

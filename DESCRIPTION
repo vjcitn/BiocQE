@@ -1,0 +1,47 @@
+Package: BiocQE
+Title: Bioconductor Quality Enhancement
+Version: 0.1.1
+Authors@R: 
+    person(given = "Vincent",
+           family = "Carey",
+           role = c("aut", "cre"),
+           email = "stvjc@channing.harvard.edu",
+           comment = c(ORCID = "your-orc-id-here"))
+Description: This package includes software and documentation related to
+    quality enhancement of the Bioconductor software ecosystem.
+    This package enumerates core software packages and provides
+    tools for reporting on their performance and reliability.
+    Software developed in this package was supported
+    in part in the Chan-Zuckerberg Initiative Essential Open Source
+    Software program, SVCF Grant 183436.
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: R (>= 4.0.3)
+Suggests: 
+    knitr,
+    rmarkdown,
+    rcmdcheck,
+    pkgdown,
+    testthat,
+    BiocStyle,
+    igraph,
+    magrittr,
+    dplyr
+Imports: 
+    BiocPkgTools,
+    pkgbuild,
+    methods,
+    BiocManager,
+    devtools,
+    RSQLite,
+    shiny,
+    pkgnet, 
+    utils
+URL: https://vjcitn.github.io/BiocQE/
+BugReports: https://github.com/vjcitn/BiocQE/issues/new/choose
+VignetteBuilder: knitr
+DockerImage: vjcitn/biocQE:latest
+BiocViews: Infrastructure, Software

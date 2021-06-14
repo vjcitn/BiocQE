@@ -1,0 +1,130 @@
+Immediate TODO list
+-------------------
+
+- Bug fix: Combining RangedData objects is currently broken (IRanges 1.9.20):
+    library(IRanges)
+    ranges <- IRanges(c(1,2,3),c(4,5,6))
+    rd1 <- RangedData(ranges)
+    rd2 <- RangedData(shift(ranges, 100))
+    rd <- c(rd1, rd2)  # Seems to work (with some warnings)...
+    validObject(rd)  # but returns an invalid object!
+
+- Herve: Make the MaskCollection class a derivative of the SimpleIRangesList
+  class.
+
+- Herve: Use a different name for "reverse" method for IRanges and
+  MaskCollection objects. Seems like, for IRanges objects, reverse()
+  and reflect() are doing the same thing, so I should just keep (and
+  eventually adapt) the latter. Also, I should add a "reflect"
+  method for SimpleIRangesList objects that would do what the current
+  "reverse" method for MaskCollection objects does.
+  Once this is done, adapt R/reverse.R file in Biostrings to use reflect()
+  instead of reverse() wherever needed.
+
+- Clean up endomorphisms.
+
+
+Long term TODO list
+-------------------
+
+o RangesList:
+  - parallel rbind
+  - binary ops: "nearest", "intersect", "setdiff", "union"
+    - 'y' omitted: become n-ary ops on items in collection
+    - 'y' specified: performed element-wise
+  - unary ops: "coverage" etc are vectorized
+    
+o DataTable:
+  - group generics (Math, Ops, Summary)
+  
+o SplitDataFrameList:
+  - rbind
+
+o IO:
+  - xscan() - read data directly into XVector objects
+
+
+-------------------------------------
+Conceptual framework (by Michael)
+-------------------------------------
+
+Basic problem: We have lots of (long) data series and need a way to
+efficiently represent and manipulate them.
+
+A series is a vector, except that the positions of the elements are
+meaningful. That is, we often expect strong auto-correlation. We have
+an abstraction called "Vector" for representing these series.
+
+There are currently two optimized means of storing long series:
+
+1) Externally, currently only in memory, in XVector derivatives.
+The main benefit here is avoiding unnecessary copying, though there
+is potential for vectors stored in databases and flat files on disk
+(but this is outside our use case).
+
+2) Run-length encoding (Rle class). This is a classic means of
+compressing discrete-valued series. It is very efficient, as long as
+there are long runs of equal value.
+
+Rle, so far, is far ahead of XVector in terms of direct
+usefulness. If XVector were implemented with an environment, rather
+than an external pointer, adding functionality would be easier. Could
+carry some things over from externalVector.
+
+As the sequence of observations in a series is important, we often
+want to manipulate specific regions of the series. We can use the
+window() function to select a particular region from a Vector, and a
+logical Rle can represent a selection of multiple regions. A slightly
+more general representation, that supports overlapping regions, is the
+IntegerRanges class.
+
+An IntegerRanges object holds any number of start,width pairs that describe
+closed intervals representing the set of integers that fall within the
+endpoints. The primary implementation is IRanges, which stores the
+information as two integer vectors.
+
+Often the endpoints of the intervals are interesting independent of
+the underlying sequence. Many utilities are implemented for
+manipulating and analyzing IntegerRanges. These include:
+
+1) overlap detection
+2) nearest neighbors: precede, follow, nearest
+3) set operations: (p)union, (p)intersect, (p)setdiff, gaps
+4) coverage, too bio specific? rename to 'table'?
+5) resolving overlap: reduce and (soon) collapse
+6) transformations: flank, reflect, restrict, narrow...
+7) (soon) mapping/alignment
+
+There are two ways to explicitly pair an IntegerRanges object with a
+Vector:
+
+1) Masking, as in MaskedXString, where only the elements outside of
+the IntegerRanges are considered by an operation.
+
+2) Views, which are essentially lists of subsequences. This
+relies in the fly-weight pattern for efficiency. Several fast paths,
+like viewSums and viewMaxs, are implemented. There is an RleViews
+and an XIntegerViews (is this one currently used at all?).
+
+Views are limited to subsequences derived from a single sequence. For
+more general lists of sequences, we have a separate framework, based
+on the List class. The List optionally ensures that all of its elements
+are derived from a specified type, and it also aims to efficiently
+represent a major use case of lists: splitting a vector by a factor.
+The indices of the elements with each factor level are stored, but
+there is no physical split of the vector into separate list elements.
+
+A special case that often occurs in data analysis is a list containing
+a set of variables in the same dataset. This problem is solved by
+'data.frame' in base R, and we have an equivalent DataFrame class
+that can hold any type of R object, as long as it has a vector semantic.
+
+Many of the important data structures have List analogs. These
+include all atomic types, as well as:
+
+  * SplitDataFrameList: a list of DataFrames that have the same
+    columns (usually the result of a split)
+    
+  * RangesList: Essentially just a list of IntegerRanges objects, but often
+    used for splitting IntegerRanges by their "space" (e.g. chromosome)
+

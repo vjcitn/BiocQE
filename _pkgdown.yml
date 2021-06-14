@@ -1,0 +1,18 @@
+url: https://vjcitn.github.io/BiocQE
+
+template:
+  params:
+    bootswatch: flatly
+    ganalytics: UA-93043521-1
+
+home:
+  title: "BiocQE"
+  type: inverse
+
+
+navbar:
+  right:
+   - icon: fa-github
+     href: https://github.com/vjcitn/BiocQE
+     
+
