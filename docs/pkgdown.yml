@@ -1,0 +1,12 @@
+pandoc: '2.13'
+pkgdown: 2.0.1
+pkgdown_sha: ~
+articles:
+  cicd1: cicd1.html
+  corepacks: corepacks.html
+  gcp: gcp.html
+last_built: 2021-12-29T10:51Z
+urls:
+  reference: https://vjcitn.github.io/BiocQE/reference
+  article: https://vjcitn.github.io/BiocQE/articles
+
