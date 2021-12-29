@@ -4,12 +4,12 @@
 \alias{browse_checks}
 \title{developer report on package check process in shiny}
 \usage{
-browse_checks(con, pnet_zip)
+browse_checks(con, pnet_list)
 }
 \arguments{
 \item{con}{SQLiteConnection where tables of check results from rcmdcheck, etc., are stored}
 
-\item{pnet_zip}{character(1) path to a zip file holding pkgnet objects}
+\item{pnet_list}{named list of pkgnet outputs}
 }
 \description{
 developer report on package check process in shiny
@@ -27,8 +27,8 @@ if (interactive()) {
  con = RSQLite::dbConnect(RSQLite::SQLite(), 
   system.file("sqlite/demo16.sqlite", package="BiocQE"), flags=RSQLite::SQLITE_RO)
  print(RSQLite::dbListTables(con))
- #demo_pnet2 = readRDS(system.file("pkgnet/demo16_pnet.rds", package="BiocQE"))
- demo_pnet2 = system.file("pkgnet/demo2.zip", package="BiocQE")
+ demo_pnet2 = readRDS(system.file("pkgnet/demo16_pnet.rds", package="BiocQE"))
+ #demo_pnet2 = system.file("pkgnet/demo2.zip", package="BiocQE")
  browse_checks(con, demo_pnet2)
 }
 }

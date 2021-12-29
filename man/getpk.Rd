@@ -4,7 +4,7 @@
 \alias{getpk}
 \title{use HTTPS to clone a package from Bioconductor git}
 \usage{
-getpk(x)
+getpk(x, tag = "RELEASE_3_14")
 }
 \arguments{
 \item{x}{character(1) package name expected to be a Bioconductor package in git}

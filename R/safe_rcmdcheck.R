@@ -9,6 +9,9 @@
 #' 'errors', 'warnings', 'notes', 'install_out', 'description' and 'version',
 #' in which the 'errors' component includes data from `capture.output` on
 #' rcmdcheck attempt.
+#' @examples
+#' chk = safe_rcmdcheck(system.file("demo_srcs/parody", package="BiocQE"))
+#' str(chk)
 #' @export
 safe_rcmdcheck = function(x, error="never", ...) {
   pkg = basename(x)

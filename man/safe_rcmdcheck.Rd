@@ -26,3 +26,7 @@ the result of rcmdcheck.  Otherwise it build a list with elements 'package',
 in which the 'errors' component includes data from \code{capture.output} on
 rcmdcheck attempt.
 }
+\examples{
+chk = safe_rcmdcheck(system.file("demo_srcs/parody", package="BiocQE"))
+str(chk)
+}

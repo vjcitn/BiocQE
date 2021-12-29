@@ -8,7 +8,8 @@ library(dplyr)
 usageclass="infra"
 todo = bioc_maint_packs |> dplyr::filter(UsageClass==usageclass) |> 
    select(Package) |> unlist() |> unname()
-ps = PackageSet(todo[1:3])
+todo = c("S4Vectors", "IRanges") # "SummarizedExperiment", "XVector", "IRanges")
+ps = PackageSet(todo)
 print(ps@pkgnames)
 tag = paste("demo_", gsub(" ", "_", lubridate::ymd_hms(Sys.time(), tz="America/New_York")), sep="")
 tag = gsub(":", "_", tag)
@@ -29,7 +30,7 @@ alldirs = dir(gitfolder, full=TRUE)
 fullrun = function(srcs, target_sqlite_path) {
      ii = rownames(installed.packages())
      getdeps = lapply(basename(srcs), function(x) try(fulfill_deps(x, ask=FALSE, update=FALSE))) # use BiocManager::valid() prior
-     rcc1 = lapply(srcs, safe_rcmdcheck)
+     rcc1 = lapply(srcs, safe_rcmdcheck, build_args="--no-build-vignettes")
      names(rcc1) = basename(srcs)
      rcc1_safe = rcc1
      save(rcc1_safe, file="rcc1_safe.rda")
